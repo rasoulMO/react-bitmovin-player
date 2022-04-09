@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import BitmovinPlayer from "./bitmovinPlayer";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className='app'>
+			<div id='wrapper'>
+				<div id='banner'>
+					<div className='title'>
+						<h1>React JS - Monolith Player</h1>
+					</div>
+					<div className='clear'></div>
+				</div>
+				<div className='container'>
+					<h1>HTML5 Adaptive Streaming Player for MPEG-DASH & HLS</h1>
+					<h2>
+						Your videos play everywhere with low startup delay, no
+						buffering and in highest quality.
+					</h2>
+					<div className='content'>
+						<div id='player-wrapper'>
+							<BitmovinPlayer />
+						</div>
+						<div className='description'>
+							<p>
+								For more information about the bitmovin player,
+								please have a look at our online
+								<a
+									href='//bitmovin.com/support'
+									target='_blank'
+									rel='noreferrer'
+								>
+									Developer Section
+								</a>
+								.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 }
 
 export default App;
